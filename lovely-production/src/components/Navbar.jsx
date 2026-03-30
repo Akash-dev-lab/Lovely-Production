@@ -26,8 +26,8 @@ export function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        isScrolled 
-          ? "py-3 bg-white/70 dark:bg-[#111111]/70 backdrop-blur-xl border-b border-slate-200 dark:border-white/10 shadow-lg" 
+        isScrolled
+          ? "py-3 bg-white/70 dark:bg-[#111111]/70 backdrop-blur-xl border-b border-slate-200 dark:border-white/10 shadow-lg"
           : "py-6 bg-transparent"
       )}
     >
@@ -36,7 +36,7 @@ export function Navbar() {
         <div className="flex items-center gap-3 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <div className="relative h-11 w-11 transition-transform duration-500 group-hover:scale-105">
             <img
-              src="/logo.png"
+              src="/Lovely-2.png"
               alt="Lovely Studio"
               className="h-full w-full object-contain transition-all duration-500 rounded"
             />
