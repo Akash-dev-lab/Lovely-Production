@@ -11,7 +11,7 @@ export function Portfolio() {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             <span className="dark:neon-text">{title}</span>
           </h2>
-          <div className="h-1 w-20 bg-brand-500 mx-auto rounded-full" />
+          <div className="h-1 w-20 bg-brand-600 mx-auto rounded-full" />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -30,8 +30,8 @@ export function Portfolio() {
 
               {item.hasAction && (
                 <div className="absolute inset-x-0 bottom-0 p-4 text-center z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <Button variant="secondary" size="sm" className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-md border-white/20 text-white">
-                    VIEW
+                  <Button variant="secondary" size="sm" className="w-full bg-brand-600/20 hover:bg-brand-600/40 backdrop-blur-md border-white/10 text-white">
+                    VIEW PROJECT
                   </Button>
                 </div>
               )}

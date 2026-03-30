@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react'
 import { ThemeToggle } from './components/ThemeToggle'
+import { Navbar } from './components/Navbar'
 
 // Lazy load sections for better performance
 const Hero = lazy(() => import('./sections/Hero').then(m => ({ default: m.Hero })));
@@ -16,8 +17,8 @@ const Loading = () => (
 
 const App = () => {
   return (
-    <main className="min-h-screen bg-white dark:bg-[#020617] selection:bg-brand-500/30 selection:text-brand-900 transition-colors duration-500">
-      <ThemeToggle />
+    <main className="min-h-screen bg-white dark:bg-[#111111] selection:bg-brand-500/30 selection:text-brand-900 transition-colors duration-500">
+      <Navbar />
       
       <Suspense fallback={<div className="h-screen flex items-center justify-center bg-white dark:bg-[#020617]"><Loading /></div>}>
         <Hero />

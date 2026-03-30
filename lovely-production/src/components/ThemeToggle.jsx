@@ -27,9 +27,9 @@ export function ThemeToggle() {
     <button
       onClick={() => setIsDark(!isDark)}
       className={cn(
-        "fixed top-6 right-6 z-50 p-3 rounded-full transition-all duration-500 group overflow-hidden",
-        "bg-white/10 dark:bg-slate-800/50 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-lg hover:scale-110 active:scale-95",
-        "hover:neon-glow-primary group-hover:border-brand-500/50"
+        "relative p-2.5 rounded-xl transition-all duration-500 group overflow-hidden",
+        "bg-slate-100 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 border border-slate-200 dark:border-white/10 shadow-sm hover:scale-105 active:scale-95",
+        "hover:neon-glow-brand group-hover:border-brand-500/50"
       )}
       aria-label="Toggle Theme"
     >
@@ -43,13 +43,13 @@ export function ThemeToggle() {
         <Moon 
           className={cn(
             "absolute inset-0 transition-all duration-500",
-            isDark ? "opacity-100 rotate-0 scale-100 text-brand-400" : "opacity-0 -rotate-90 scale-0"
+            isDark ? "opacity-100 rotate-0 scale-100 text-brand-500" : "opacity-0 -rotate-90 scale-0"
           )} 
         />
       </div>
       
       {/* Subtle background glow effect on hover */}
-      <div className="absolute inset-0 bg-brand-500/20 opacity-0 group-hover:opacity-100 transition-opacity blur-xl rounded-full -z-10" />
+      <div className="absolute inset-0 bg-brand-600/20 opacity-0 group-hover:opacity-100 transition-opacity blur-xl rounded-full -z-10" />
     </button>
   );
 }

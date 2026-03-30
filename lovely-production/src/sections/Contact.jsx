@@ -13,12 +13,12 @@ export function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold dark:neon-text mb-4 text-slate-900 dark:text-white">
             {title}
           </h2>
-          <div className="h-1 w-20 bg-brand-500 mx-auto rounded-full" />
+          <div className="h-1 w-20 bg-brand-600 mx-auto rounded-full" />
         </div>
 
         <div className="glass-card rounded-3xl p-8 md:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 relative overflow-hidden">
           {/* Decorative background glow for contact card */}
-          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-brand-500/20 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-brand-600/10 rounded-full blur-[100px] pointer-events-none" />
           
           <div className="relative z-10">
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-10">
@@ -27,7 +27,7 @@ export function Contact() {
             
             <div className="space-y-8">
               <div className="flex items-center gap-6 group">
-                <div className="h-14 w-14 rounded-2xl bg-brand-500/10 flex items-center justify-center text-brand-600 dark:text-brand-400 border border-brand-500/20 group-hover:neon-glow-primary transition-all duration-300">
+                <div className="h-14 w-14 rounded-2xl bg-brand-600/10 flex items-center justify-center text-brand-600 dark:text-brand-500 border border-brand-600/20 group-hover:neon-glow-brand transition-all duration-300">
                   <Phone size={24} />
                 </div>
                 <div className="flex flex-col">
@@ -39,7 +39,7 @@ export function Contact() {
               </div>
 
               <div className="flex items-center gap-6 group">
-                <div className="h-14 w-14 rounded-2xl bg-brand-500/10 flex items-center justify-center text-brand-600 dark:text-brand-400 border border-brand-500/20 group-hover:neon-glow-primary transition-all duration-300">
+                <div className="h-14 w-14 rounded-2xl bg-brand-600/10 flex items-center justify-center text-brand-600 dark:text-brand-500 border border-brand-600/20 group-hover:neon-glow-brand transition-all duration-300">
                   <Mail size={24} />
                 </div>
                 <div className="flex flex-col">
@@ -60,7 +60,7 @@ export function Contact() {
                   <input 
                     type="text" 
                     placeholder={`Enter ${field.toLowerCase()}`}
-                    className="w-full bg-slate-100 dark:bg-white/5 border-none rounded-xl px-5 py-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500/40 transition-all outline-hidden backdrop-blur-md"
+                    className="w-full bg-slate-100 dark:bg-white/5 border-none rounded-xl px-5 py-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-600/40 transition-all outline-hidden backdrop-blur-md"
                   />
                 </div>
               ))}
@@ -71,11 +71,11 @@ export function Contact() {
               <textarea 
                 rows={4}
                 placeholder={`Enter ${form.fields[2].toLowerCase()}`}
-                className="w-full bg-slate-100 dark:bg-white/5 border-none rounded-xl px-5 py-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500/40 transition-all outline-hidden backdrop-blur-md resize-none"
+                className="w-full bg-slate-100 dark:bg-white/5 border-none rounded-xl px-5 py-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-600/40 transition-all outline-hidden backdrop-blur-md resize-none"
               />
             </div>
 
-            <Button size="lg" className="w-full h-14 text-lg font-bold neon-glow-primary hover:neon-glow-primary group">
+            <Button size="lg" className="w-full h-14 text-lg font-bold neon-glow-brand hover:neon-glow-brand group">
               {form.cta}
               <Send size={18} className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </Button>
