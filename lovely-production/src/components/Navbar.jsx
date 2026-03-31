@@ -41,7 +41,7 @@ export function Navbar() {
             )}
           >
             <img
-              src="/LoveLogo.png"
+              src="./LoveLogo.png"
               alt="Lovely Studio"
               className="h-full w-full object-contain transition-all duration-500 rounded"
             />
