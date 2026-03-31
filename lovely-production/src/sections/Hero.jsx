@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section 
       aria-label="Hero Section" 
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-white dark:bg-transparent pt-32 pb-16 lg:pt-48 lg:pb-24"
+      className="relative min-h-[90vh] flex items-center overflow-hidden bg-white dark:bg-transparent pt-28 pb-16 lg:pt-40 lg:pb-24"
     >
       {/* Background decoration - ARIA Hidden for accessibility */}
       <div 
@@ -23,41 +23,48 @@ export function Hero() {
         <div className="absolute bottom-20 left-0 w-[400px] h-[400px] bg-brand-600/10 rounded-full" />
       </div>
 
-      <div className="container-custom relative z-10 text-center">
-        <header className="max-w-4xl mx-auto">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-brand-50/50 dark:bg-brand-600/10 text-brand-700 dark:text-brand-400 text-sm font-medium mb-8 border border-brand-100 dark:border-brand-600/20 backdrop-blur-md">
-            <span className="flex h-2 w-2 rounded-full bg-brand-600 mr-2 animate-pulse" aria-hidden="true" />
-            Animation & Graphics Experts
+      <div className="container-custom relative z-10">
+        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] lg:gap-16">
+          <div className="max-w-3xl text-center lg:text-left">
+            <header>
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-brand-50/50 dark:bg-brand-600/10 text-brand-700 dark:text-brand-400 text-sm font-medium mb-8 border border-brand-100 dark:border-brand-600/20 backdrop-blur-md">
+                <span className="flex h-2 w-2 rounded-full bg-brand-600 mr-2 animate-pulse" aria-hidden="true" />
+                Animation & Graphics Experts
+              </div>
+
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-black text-slate-900 dark:text-white mb-6 leading-[0.98] tracking-tight">
+                <span className="dark:neon-text">{title}</span>
+              </h1>
+
+              <p className="max-w-2xl mx-auto lg:mx-0 text-lg sm:text-xl lg:text-2xl font-medium text-slate-600 dark:text-slate-300 mb-10 leading-relaxed">
+                {subtitle}
+              </p>
+            </header>
+
+            <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-6">
+              <Button size="lg" className="h-16 px-10 text-lg shadow-brand-600/20 hover:shadow-brand-600/40 transition-all duration-500" aria-label="Begin your project today">
+                {cta}
+              </Button>
+            </div>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-black text-slate-900 dark:text-white mb-6 leading-[1.05] tracking-tight">
-            <span className="dark:neon-text">{title}</span>
-          </h1>
-
-          <p className="max-w-2xl mx-auto text-xl md:text-2xl font-medium text-slate-600 dark:text-slate-300 mb-10 leading-relaxed">
-            {subtitle}
-          </p>
-        </header>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20">
-          <Button size="lg" className="h-16 px-10 text-lg shadow-brand-600/20 hover:shadow-brand-600/40 transition-all duration-500" aria-label="Begin your project today">
-            {cta}
-          </Button>
-        </div>
-
-        {/* Optimized Hero Illustration representation mirroring the image */}
-        <div className="relative mx-auto max-w-5xl group">
-          <div className="absolute -inset-4 bg-linear-to-r from-brand-700 to-brand-500 opacity-20 blur-3xl -z-10 group-hover:opacity-40 transition duration-1000"></div>
-          <div className="relative rounded-3xl overflow-hidden glass-card border border-white/10 shadow-2xl p-2 bg-white/5">
-            <img 
-              src="/hero-illustration.png" 
-              alt="Lovely Production Creative Demo Workspace" 
-              width={1200} 
-              height={600} 
-              loading="eager"
-              fetchPriority="high"
-              className="rounded-2xl w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500 shadow-inner"
-            />
+          {/* Optimized Hero Illustration representation mirroring the image */}
+          <div className="relative mx-auto w-full max-w-xl lg:mx-0 lg:justify-self-end group">
+            <div className="absolute -inset-5 bg-linear-to-r from-brand-700 to-brand-500 opacity-20 blur-3xl -z-10 group-hover:opacity-35 transition duration-1000"></div>
+            <div className="absolute inset-0 rounded-[2rem] bg-radial-[at_50%_20%] from-brand-500/15 via-transparent to-transparent opacity-80 pointer-events-none" aria-hidden="true"></div>
+            <div className="relative rounded-[2rem] overflow-hidden glass-card border border-white/10 shadow-2xl p-3 sm:p-4 bg-white/5">
+              <img 
+                src="/hero-illustration.png" 
+                alt="Lovely Production creative showcase preview" 
+                width={1024} 
+                height={1024} 
+                sizes="(min-width: 1024px) 42vw, (min-width: 640px) 70vw, 92vw"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+                className="rounded-[1.5rem] w-full h-auto object-cover aspect-square opacity-95 group-hover:opacity-100 transition-opacity duration-500 shadow-inner"
+              />
+            </div>
           </div>
         </div>
       </div>
