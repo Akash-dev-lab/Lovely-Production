@@ -36,14 +36,14 @@ export function Navbar() {
         <div className="flex items-center gap-3 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <div className="relative h-11 w-11 transition-transform duration-500 group-hover:scale-105">
             <img
-              src="/Lovely-2.png"
+              src="/loveLogo.png"
               alt="Lovely Studio"
               className="h-full w-full object-contain transition-all duration-500 rounded"
             />
           </div>
-          <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors">
+          {/* <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors">
             Lovely <span className="text-brand-600 dark:text-brand-500">Studio</span>
-          </span>
+          </span> */}
         </div>
 
         {/* Desktop Navigation */}

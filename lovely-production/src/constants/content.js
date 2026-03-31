@@ -4,7 +4,8 @@
  */
 export const CONTENT = {
   hero: {
-    title: "Lovely Production",
+    title: "Love",
+    title2: "Productions",
     subtitle: "Graphics | Video Editing | Animation Experts",
     cta: "Contact Now",
   },
