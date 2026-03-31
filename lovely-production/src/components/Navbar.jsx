@@ -31,19 +31,24 @@ export function Navbar() {
           : "py-6 bg-transparent"
       )}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className="container-custom flex items-center justify-between">
         {/* Logo Section */}
-        <div className="flex items-center gap-3 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <div className="relative h-11 w-11 transition-transform duration-500 group-hover:scale-105">
+        <div className="flex items-center gap-2.5 sm:gap-3 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <div
+            className={cn(
+              "relative shrink-0 transition-all duration-500 group-hover:scale-105",
+              isScrolled ? "h-11 w-11 md:h-12 md:w-12" : "h-12 w-12 md:h-14 md:w-14"
+            )}
+          >
             <img
-              src="/loveLogo.png"
+              src="/LoveLogo.png"
               alt="Lovely Studio"
               className="h-full w-full object-contain transition-all duration-500 rounded"
             />
           </div>
-          {/* <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors">
-            Lovely <span className="text-brand-600 dark:text-brand-500">Studio</span>
-          </span> */}
+          <span className="text-lg sm:text-xl font-bold tracking-tight leading-none text-slate-600 dark:text-white transition-colors">
+            Love <span className="text-brand-600 dark:text-brand-500">Productions</span>
+          </span>
         </div>
 
         {/* Desktop Navigation */}
@@ -53,7 +58,7 @@ export function Navbar() {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-500 transition-colors relative group"
+                  className="text-sm font-medium text-slate-500 dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-500 transition-colors relative group"
                 >
                   {link.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-600 transition-all duration-300 group-hover:w-full" />

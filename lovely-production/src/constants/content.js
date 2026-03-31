@@ -59,7 +59,7 @@ export const CONTENT = {
     title: "Contact Us",
     getInTouch: {
       title: "Get in Touch",
-      phone: "9315358093",
+      phone: "+91 9315358093",
       email: "nshewaliya@gmail.com",
     },
     form: {
